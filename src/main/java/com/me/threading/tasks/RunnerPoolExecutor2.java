@@ -7,9 +7,7 @@ public class RunnerPoolExecutor2{
 
 	public static void main(String[] args){
 		ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, 100, TimeUnit.MILLISECONDS,
-		new LinkedBlockingQueue<>(),
-		new ThreadFactoryTest(),
-		new ThreadPoolExecutor.CallerRunsPolicy());
+			new LinkedBlockingQueue<>(), new ThreadFactoryTest(), new ThreadPoolExecutor.CallerRunsPolicy());
 		executor.execute(new MyRunnable("Barcelona"));
 		executor.execute(new MyRunnable("Simpson"));
 		executor.execute(new MyRunnable("Bitcoin"));

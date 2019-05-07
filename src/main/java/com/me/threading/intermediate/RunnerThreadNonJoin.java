@@ -10,7 +10,7 @@ public class RunnerThreadNonJoin{
 		thread1.start();
 		thread2.start();
 		thread3.start();
-		System.out.println("All three threads have finished execution");
+		System.out.println("The program is finished");
 	}
 
 }

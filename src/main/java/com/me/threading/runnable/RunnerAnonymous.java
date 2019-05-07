@@ -4,6 +4,7 @@ package com.me.threading.runnable;
 public class RunnerAnonymous{
 
 	public static void main(String[] args){
+		// Genera una clase extra: RunnerAnonymous$1.class
 		@SuppressWarnings("Convert2Lambda")
 		Runnable runnable = new Runnable(){
 			@Override

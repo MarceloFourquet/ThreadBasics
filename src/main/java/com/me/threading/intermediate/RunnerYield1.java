@@ -27,11 +27,10 @@ public class RunnerYield1{
 
 class ThreadYield1 extends Thread{
 	
-	private String name;
 	private int stopCount;
 	
 	public ThreadYield1 (String name, int stopCount){
-		this.name = name;
+		super(name);
 		this.stopCount = stopCount;
 	}
 	
@@ -39,9 +38,9 @@ class ThreadYield1 extends Thread{
 	@SuppressWarnings("CallToThreadYield")
 	public void run(){
 		for(int i = 1; i <= 50; i++){
-			System.out.printf("Running %s - Step: %d%n", name, i);
+			System.out.printf("Running %s - Step: %d%n", getName(), i);
 			if(i % stopCount == 0){
-				System.out.printf("Stopping thread: %s%n", name);
+				System.out.printf("Stopping thread: %s%n", getName());
 				yield();
 			}
 		}
